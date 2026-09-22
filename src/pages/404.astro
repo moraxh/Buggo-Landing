@@ -2,6 +2,7 @@
 import '@fontsource/cabin-sketch/700.css';
 import '@fontsource/patrick-hand/400.css';
 import '../styles/global.css';
+import { ArrowUpRight } from '@lucide/astro';
 ---
 
 <!doctype html>
@@ -22,7 +23,7 @@ import '../styles/global.css';
         <img src="/images/buggo.webp" alt="" width="58" height="50" />
         <span>Buggo</span>
       </a>
-      <a class="header-home" href="/">Home <span aria-hidden="true">↗</span></a>
+      <a class="header-home" href="/">Home <ArrowUpRight class="link-icon" size={19} stroke-width={1.9} /></a>
     </header>
 
     <main class="lost-case shell" id="main">
@@ -30,7 +31,7 @@ import '../styles/global.css';
         <p class="case-label">CASE FILE / 404</p>
         <h1>This page<br />left no <em>clues.</em></h1>
         <p class="lost-description">We checked the stack traces, questioned the links, and found nothing at this address.</p>
-        <a class="button button-primary" href="/">Back to the scene <span aria-hidden="true">↗</span></a>
+        <a class="button button-primary" href="/">Back to the scene <ArrowUpRight class="link-icon" size={20} stroke-width={1.9} /></a>
       </div>
 
       <div class="lost-art" aria-hidden="true">
@@ -61,11 +62,12 @@ import '../styles/global.css';
     border-bottom: 1px solid rgb(71 49 36 / 0.25);
   }
   .header-home {
+    display: inline-flex;
+    align-items: center;
     font-size: 20px;
     border-bottom: 2px solid #8b6b55;
   }
-  .header-home span {
-    display: inline-block;
+  .header-home :global(.link-icon) {
     margin-left: 10px;
   }
   .lost-case {

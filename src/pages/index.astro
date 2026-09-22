@@ -2,6 +2,7 @@
 import '@fontsource/cabin-sketch/700.css';
 import '@fontsource/patrick-hand/400.css';
 import '../styles/global.css';
+import { ArrowUpRight, ChevronDown } from '@lucide/astro';
 
 const github = 'https://github.com/moraxh/Buggo';
 const npm = 'https://www.npmjs.com/package/@moraxh/buggo';
@@ -61,7 +62,7 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
         <a href="#demo">Demo</a>
         <a href={github} target="_blank" rel="noreferrer">GitHub</a>
       </nav>
-      <a class="header-cta" href="#get-started">Get started <span aria-hidden="true">↗</span></a>
+      <a class="header-cta" href="#get-started">Get started <ArrowUpRight class="link-icon" size={20} stroke-width={1.9} /></a>
     </header>
 
     <main id="main">
@@ -70,8 +71,8 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
           <h1 id="hero-title">Your bugs<br />have nowhere<br />to <em>hide.</em></h1>
           <p class="hero-description">Buggo turns bug reports into suspects, so you and your coding agent know where to look first.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#get-started">Get started <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href={github} target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#get-started">Get started <ArrowUpRight class="link-icon" size={22} stroke-width={1.9} /></a>
+            <a class="text-link" href={github} target="_blank" rel="noreferrer">View on GitHub <ArrowUpRight class="link-icon" size={21} stroke-width={1.9} /></a>
           </div>
         </div>
         <div class="hero-art">
@@ -188,10 +189,10 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
           <div class="case-bottom" data-reveal>
             <p><strong>Suspects, not convictions.</strong> Buggo narrows the search. You verify the culprit.</p>
             <details class="case-playback">
-              <summary>Watch the original run <span aria-hidden="true">↘</span></summary>
+              <summary>Watch the original run <ChevronDown class="link-icon" size={22} stroke-width={1.9} /></summary>
               <div class="case-playback-content">
                 <img src="/images/demo.gif" alt="Buggo CLI investigating the Salamanca course scraper and showing ranked suspect files." width="860" height="529" loading="lazy" />
-                <a href={`${github}#readme`} target="_blank" rel="noreferrer">Read the transcript on GitHub <span aria-hidden="true">↗</span></a>
+                <a href={`${github}#readme`} target="_blank" rel="noreferrer">Read the transcript on GitHub <ArrowUpRight class="link-icon" size={18} stroke-width={1.9} /></a>
               </div>
             </details>
           </div>
@@ -212,7 +213,7 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
           <code>buggo config set-key &lt;your-openrouter-key&gt;</code>
           <span class="install-label">03 / investigate</span>
           <code>buggo investigate "your bug" --repo .</code>
-          <a class="button button-primary" href={npm} target="_blank" rel="noreferrer">View package <span aria-hidden="true">↗</span></a>
+          <a class="button button-primary" href={npm} target="_blank" rel="noreferrer">View package <ArrowUpRight class="link-icon" size={20} stroke-width={1.9} /></a>
         </div>
       </section>
     </main>
@@ -220,7 +221,7 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
     <footer class="site-footer shell" data-reveal>
       <span>Buggo © 2026</span>
       <span>Every bug leaves clues.</span>
-      <a href={github} target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href={github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight class="link-icon" size={18} stroke-width={1.9} /></a>
     </footer>
     <script>
       const navigationType = performance.getEntriesByType('navigation')[0]?.type;

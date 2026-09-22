@@ -93,6 +93,8 @@ a {
   color: #a05a37;
 }
 .header-cta {
+  display: inline-flex;
+  align-items: center;
   justify-self: end;
   background: #30251f;
   color: #fff7e9;
@@ -104,12 +106,10 @@ a {
   white-space: nowrap;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.header-cta span,
-.button span,
-.text-link span {
-  display: inline-block;
+.link-icon {
+  flex: none;
+  vertical-align: -0.2em;
   margin-left: 14px;
-  font-family: Arial, sans-serif;
 }
 .hero {
   min-height: min(625px, calc(100dvh - 76px));
@@ -197,6 +197,8 @@ h1 em:after {
   box-shadow: 4px 4px 0 #b1805d;
 }
 .text-link {
+  display: inline-flex;
+  align-items: center;
   font-size: 21px;
   border-bottom: 2px solid #8b6b55;
   padding-bottom: 2px;
@@ -598,12 +600,12 @@ h1 em:after {
   outline: 3px solid #a45a3c;
   outline-offset: 4px;
 }
-.case-playback summary span {
+.case-playback summary .link-icon {
   float: right;
-  font-family: Arial, sans-serif;
+  margin-left: 12px;
   transition: transform 0.2s ease;
 }
-.case-playback[open] summary span {
+.case-playback[open] summary .link-icon {
   transform: rotate(180deg);
 }
 .case-playback-content {
@@ -616,7 +618,8 @@ h1 em:after {
   box-shadow: 6px 7px 0 #bc9e7d;
 }
 .case-playback-content a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   border-bottom: 1px solid #8b6b55;
   margin-top: 15px;
   font-size: 18px;
@@ -679,6 +682,10 @@ h1 em:after {
   border-top: 1px solid #af9275;
   color: #6f5746;
   font-size: 18px;
+}
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
 }
 a:focus-visible {
   outline: 3px solid #a45a3c;
@@ -990,7 +997,7 @@ a:focus-visible {
   .fake-quotes img,
   .install-card,
   .closing-mascot img,
-  .text-link span {
+  .text-link .link-icon {
     transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .brand:hover img,
@@ -1016,7 +1023,7 @@ a:focus-visible {
   .case-playback summary:hover {
     color: #a15b3b;
   }
-  .text-link:hover span {
+  .text-link:hover .link-icon {
     transform: translate3d(3px, -3px, 0);
   }
   .install-card:hover {
@@ -1035,7 +1042,7 @@ a:focus-visible {
   }
   .button,
   .header-cta,
-  .case-playback summary span {
+  .case-playback summary .link-icon {
     transition: none;
   }
   .button:hover,
