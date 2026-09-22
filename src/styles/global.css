@@ -331,6 +331,81 @@ h1 em:after {
   max-width: 425px;
   margin: 0;
 }
+.formats {
+  border-top: 1px solid #d5c3aa;
+  display: grid;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+  align-items: center;
+  gap: 6%;
+  padding-block: 100px 110px;
+}
+.formats-heading {
+  align-self: center;
+}
+.formats-heading .hand-note {
+  margin-bottom: 20px;
+}
+.formats-heading h2 {
+  font-size: clamp(54px, 5vw, 76px);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  margin-bottom: 24px;
+}
+.formats-heading > p:last-child {
+  color: #685448;
+  font-size: 22px;
+  line-height: 1.22;
+  max-width: 365px;
+  margin: 0;
+}
+.formats-ledger {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 0;
+}
+.format-row {
+  min-height: 177px;
+  padding: 21px 24px 23px;
+  background: #fff7e9;
+  border: 1px solid #b59a7e;
+  box-shadow: 5px 6px 0 rgb(130 91 62 / 0.14);
+  transform: rotate(-0.7deg);
+}
+.format-row:nth-child(2) {
+  background: #f7ead3;
+  transform: rotate(0.9deg) translateY(6px);
+}
+.format-row:nth-child(3) {
+  background: #f7ead3;
+  transform: rotate(0.5deg) translateX(5px);
+}
+.format-row:nth-child(4) {
+  transform: rotate(-0.6deg) translate(4px, 7px);
+}
+.format-row dt {
+  font: 700 29px/1 "Cabin Sketch", cursive;
+  padding-bottom: 12px;
+  margin-bottom: 13px;
+  border-bottom: 1px dashed #c9b499;
+}
+.format-row dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 14px;
+  margin: 0;
+}
+.format-row code {
+  color: #865039;
+  font: 600 15px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.format-detail {
+  flex-basis: 100%;
+  color: #786252;
+  font-size: 16px;
+  line-height: 1.2;
+}
 .case-section {
   background-color: #e9d6ba;
   background-image:
@@ -707,6 +782,17 @@ a:focus-visible {
     gap: 35px;
     padding-block: 75px 90px;
   }
+  .formats {
+    grid-template-columns: 1fr;
+    gap: 37px;
+    padding-block: 74px 84px;
+  }
+  .formats-heading > p:last-child {
+    max-width: 600px;
+  }
+  .format-row {
+    min-height: 0;
+  }
   .section-lead h2 {
     font-size: clamp(53px, 11vw, 82px);
   }
@@ -770,6 +856,34 @@ a:focus-visible {
   }
   .steps p {
     font-size: 19px;
+  }
+  .formats-heading > p:last-child {
+    font-size: 20px;
+  }
+  .formats-heading h2 {
+    font-size: clamp(46px, 11vw, 54px);
+  }
+  .formats-heading h2 em {
+    white-space: normal;
+  }
+  .formats-ledger {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .format-row,
+  .format-row:nth-child(2),
+  .format-row:nth-child(3),
+  .format-row:nth-child(4) {
+    transform: none;
+  }
+  .format-row dt {
+    font-size: 27px;
+  }
+  .format-row dd {
+    gap: 4px 15px;
+  }
+  .format-row code {
+    font-size: 15px;
   }
   .case-heading h2 {
     font-size: 53px;
