@@ -8,6 +8,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@fontsource/cabin-sketch": "^5.2.8",
     "@fontsource/patrick-hand": "^5.2.8",
     "astro": "^7.3.4"

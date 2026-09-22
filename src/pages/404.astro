@@ -1,0 +1,210 @@
+---
+import '@fontsource/cabin-sketch/700.css';
+import '@fontsource/patrick-hand/400.css';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5eddd" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Page missing | Buggo</title>
+    <link rel="icon" type="image/webp" href="/images/buggo.webp" />
+  </head>
+  <body class="not-found-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="not-found-header shell">
+      <a class="brand" href="/" aria-label="Buggo, back to home">
+        <img src="/images/buggo.webp" alt="" width="58" height="50" />
+        <span>Buggo</span>
+      </a>
+      <a class="header-home" href="/">Home <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="lost-case shell" id="main">
+      <div class="lost-copy">
+        <p class="case-label">CASE FILE / 404</p>
+        <h1>This page<br />left no <em>clues.</em></h1>
+        <p class="lost-description">We checked the stack traces, questioned the links, and found nothing at this address.</p>
+        <a class="button button-primary" href="/">Back to the scene <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="lost-art" aria-hidden="true">
+        <span class="case-number">404</span>
+        <img src="/images/buggo.webp" alt="" width="1355" height="1161" />
+        <span class="lost-stamp">MISSING PAGE</span>
+      </div>
+    </main>
+
+    <footer class="not-found-footer shell">
+      <span>Buggo © 2026</span>
+      <span>Every bug leaves clues. Almost.</span>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(body.not-found-page) {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  .not-found-header {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(71 49 36 / 0.25);
+  }
+  .header-home {
+    font-size: 20px;
+    border-bottom: 2px solid #8b6b55;
+  }
+  .header-home span {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .lost-case {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 4%;
+    padding-block: 45px 65px;
+  }
+  .lost-copy {
+    position: relative;
+    z-index: 1;
+  }
+  .case-label {
+    color: #a15b3b;
+    font-size: 21px;
+    letter-spacing: 0.04em;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: clamp(70px, 7.2vw, 118px);
+    max-width: 710px;
+    margin-bottom: 34px;
+  }
+  .lost-description {
+    color: #59493d;
+    font-size: clamp(22px, 2vw, 27px);
+    line-height: 1.2;
+    max-width: 510px;
+    margin-bottom: 34px;
+  }
+  .lost-art {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 500px;
+  }
+  .case-number {
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    color: rgb(155 105 69 / 0.21);
+    font: 700 clamp(180px, 23vw, 330px)/1 "Cabin Sketch", cursive;
+    letter-spacing: -0.12em;
+    transform: rotate(-7deg);
+  }
+  .lost-art img {
+    position: relative;
+    width: min(75%, 450px);
+    height: auto;
+    transform: rotate(3deg);
+    filter: drop-shadow(13px 15px 3px rgb(65 43 29 / 0.1));
+  }
+  .lost-stamp {
+    position: absolute;
+    right: 0;
+    bottom: 12%;
+    color: #a15b3b;
+    border: 4px double currentColor;
+    padding: 9px 16px 6px;
+    font: 700 clamp(22px, 2.6vw, 33px)/1 "Cabin Sketch", cursive;
+    transform: rotate(-8deg);
+  }
+  .not-found-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-block: 20px 25px;
+    border-top: 1px solid #af9275;
+    color: #6f5746;
+    font-size: 18px;
+  }
+  @media (max-width: 760px) {
+    .not-found-header {
+      min-height: 72px;
+    }
+    .not-found-header .brand img {
+      width: 48px;
+      height: 44px;
+    }
+    .not-found-header .brand span {
+      font-size: 35px;
+    }
+    .lost-case {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding-block: 60px 40px;
+    }
+    h1 {
+      font-size: clamp(58px, 10.5vw, 82px);
+    }
+    .lost-art {
+      min-height: 350px;
+    }
+    .case-number {
+      font-size: clamp(175px, 35vw, 300px);
+    }
+    .lost-art img {
+      width: min(65%, 300px);
+    }
+    .lost-stamp {
+      right: 8%;
+      bottom: 5%;
+    }
+  }
+  @media (max-width: 460px) {
+    .header-home {
+      font-size: 18px;
+    }
+    h1 {
+      font-size: clamp(54px, 12.5vw, 62px);
+    }
+    .lost-description {
+      font-size: 21px;
+    }
+    .lost-art {
+      min-height: 280px;
+    }
+    .lost-stamp {
+      font-size: 21px;
+      border-width: 3px;
+    }
+    .not-found-footer {
+      font-size: 16px;
+    }
+    .not-found-footer span:last-child {
+      display: none;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .lost-copy {
+      animation: arrive 0.85s 0.1s both;
+    }
+    .lost-art {
+      animation: arrive 1s 0.22s both;
+    }
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+</style>

@@ -5,6 +5,11 @@ import '../styles/global.css';
 
 const github = 'https://github.com/moraxh/Buggo';
 const npm = 'https://www.npmjs.com/package/@moraxh/buggo';
+const title = 'Buggo | Your bugs have nowhere to hide';
+const description = 'Buggo turns bug reports into ranked suspects, so you and your coding agent know where to look first.';
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+const socialImageUrl = new URL('/images/buggo-og.png', Astro.site).href;
+const socialImageAlt = 'Buggo the beetle detective studies clues beside an evidence board and a folder of suspects.';
 ---
 
 <!doctype html>
@@ -13,8 +18,26 @@ const npm = 'https://www.npmjs.com/package/@moraxh/buggo';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5eddd" />
-    <meta name="description" content="Your bugs have nowhere to hide. Buggo investigates reports and ranks the files worth inspecting first." />
-    <title>Buggo | Your bugs have nowhere to hide</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Buggo" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1733" />
+    <meta property="og:image:height" content="907" />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
+    <title>{title}</title>
     <link rel="icon" type="image/webp" href="/images/buggo.webp" />
     <script is:inline>
       const navigationEntry = performance.getEntriesByType('navigation')[0];
