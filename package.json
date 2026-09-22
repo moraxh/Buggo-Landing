@@ -1,0 +1,15 @@
+{
+  "name": "buggo-landing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@fontsource/cabin-sketch": "^5.2.8",
+    "@fontsource/patrick-hand": "^5.2.8",
+    "astro": "^7.3.4"
+  }
+}

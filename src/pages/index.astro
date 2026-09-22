@@ -1,0 +1,224 @@
+---
+import '@fontsource/cabin-sketch/700.css';
+import '@fontsource/patrick-hand/400.css';
+import '../styles/global.css';
+
+const github = 'https://github.com/moraxh/Buggo';
+const npm = 'https://www.npmjs.com/package/@moraxh/buggo';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5eddd" />
+    <meta name="description" content="Your bugs have nowhere to hide. Buggo investigates reports and ranks the files worth inspecting first." />
+    <title>Buggo | Your bugs have nowhere to hide</title>
+    <link rel="icon" type="image/webp" href="/images/buggo.webp" />
+    <script is:inline>
+      const navigationEntry = performance.getEntriesByType('navigation')[0];
+      if (navigationEntry?.type === 'reload') history.scrollRestoration = 'manual';
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('motion-ready');
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header shell">
+      <a class="brand" href="#top" aria-label="Buggo, back to top">
+        <img src="/images/buggo.webp" alt="" width="58" height="50" />
+        <span>Buggo</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#demo">Demo</a>
+        <a href={github} target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <a class="header-cta" href="#get-started">Get started <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Your bugs<br />have nowhere<br />to <em>hide.</em></h1>
+          <p class="hero-description">Buggo turns bug reports into suspects, so you and your coding agent know where to look first.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#get-started">Get started <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href={github} target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="/images/buggo-detective-transparent.webp" alt="Buggo the beetle detective examines code clues at a desk beside an evidence board." width="1536" height="1024" fetchpriority="high" />
+        </div>
+      </section>
+
+      <section class="fake-proof shell" aria-label="Deliberately fictional testimonials">
+        <div class="fake-quotes">
+          <blockquote data-reveal>
+            <img src="/testimonies/frijol.webp" alt="Frijol the cat" width="60" height="60" loading="lazy" />
+            <div><p>“Finally, someone who takes my bugs seriously.”</p><footer>A very real developer</footer></div>
+          </blockquote>
+          <blockquote data-reveal>
+            <img src="/testimonies/sabrina.webp" alt="Sabrina the cat" width="60" height="60" loading="lazy" />
+            <div><p>“Buggo gave me suspects. I supplied the panic.”</p><footer>Another very real developer</footer></div>
+          </blockquote>
+          <blockquote data-reveal>
+            <img src="/testimonies/luna.webp" alt="Luna the cat" width="60" height="60" loading="lazy" />
+            <div><p>“Buggo found the issue in 30 seconds. I spent 3 hours blaming my coworkers.”</p><footer>Also a real developer</footer></div>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="feature-strip shell" id="features" aria-label="What Buggo does">
+        <div class="feature-list">
+          <article data-reveal><h2>Investigate</h2><p>Turn a messy bug report into a focused investigation.</p></article>
+          <article data-reveal><h2>Find suspects</h2><p>Get ranked files and the evidence behind each lead.</p></article>
+          <article data-reveal><h2>Save tokens</h2><p>Give your coding agent fewer files to read first.</p></article>
+          <article data-reveal><h2>Built for agents</h2><p>Use the CLI, JSON output, or the MCP server.</p></article>
+        </div>
+      </section>
+
+      <section class="intro shell" id="how-it-works" aria-labelledby="how-title">
+        <div class="section-lead" data-reveal>
+          <p class="hand-note">A little detective work goes a long way.</p>
+          <h2 id="how-title">Find the lead.<br /><em>Then fix the bug.</em></h2>
+          <p>Buggo scans the shape of your codebase and ranks likely files from the clues in your report. You decide what to inspect and verify.</p>
+        </div>
+        <ol class="steps">
+          <li data-reveal><span class="step-number">01</span><div><h3>Describe the bug</h3><p>Start with what broke. Add an error, stack trace, or recent change if you have one.</p></div></li>
+          <li data-reveal><span class="step-number">02</span><div><h3>Inspect the suspects</h3><p>Buggo points to likely files and functions with evidence for each lead.</p></div></li>
+          <li data-reveal><span class="step-number">03</span><div><h3>Follow the evidence</h3><p>Open the ranked files, reproduce the issue, and make the fix with a smaller search area.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="case-section" id="demo" aria-labelledby="case-title">
+        <div class="shell">
+          <div class="case-heading" data-reveal>
+            <div>
+              <p class="case-kicker">From the actual evidence drawer / BG-0001</p>
+              <h2 id="case-title">The case of the<br /><em>missing courses.</em></h2>
+            </div>
+            <p>One bug report. A repository full of possibilities. Buggo found a place to start.</p>
+          </div>
+
+          <article class="case-folder" aria-label="Real Buggo investigation result" data-reveal>
+            <span class="folder-tab" aria-hidden="true">CASE FILE / BG-0001</span>
+            <span class="case-stamp" aria-hidden="true">LOCALIZED</span>
+            <div class="case-report">
+              <p class="case-field-label">The report</p>
+              <blockquote>“The weekly DICIS schedule scraper is silently dropping all Salamanca campus courses.”</blockquote>
+              <p class="case-scene">Scene scanned: <strong>83 production files</strong></p>
+              <p class="case-handnote">There goes the afternoon of opening files at random.</p>
+            </div>
+            <div class="case-suspects">
+              <div class="suspects-heading"><h3>Suspects</h3><span>Ranked from the real run</span></div>
+              <ol>
+                <li>
+                  <span class="suspect-rank">01</span>
+                  <div class="suspect-details">
+                    <div class="suspect-top"><strong>scrapper/src/scrapers/dicis_salamanca.py</strong><span>Primary suspect · 97%</span></div>
+                    <p>Symbols: <code>is_valid_room</code>, <code>normalize_room</code>, <code>should_skip_subject</code>, <code>format_professor</code>, <code>extract_days</code></p>
+                  </div>
+                </li>
+                <li>
+                  <span class="suspect-rank">02</span>
+                  <div class="suspect-details">
+                    <div class="suspect-top"><strong>scrapper/src/utils.py</strong><span>Weak lead · 3%</span></div>
+                    <p>Symbols: <code>clean</code>, <code>safe_parse_time</code>, <code>normalize</code>, <code>generate_hash</code>, <code>subject_id</code></p>
+                  </div>
+                </li>
+              </ol>
+              <p class="case-result"><span aria-hidden="true">✓</span> 5 files recommended for investigation.</p>
+            </div>
+          </article>
+
+          <div class="case-bottom" data-reveal>
+            <p><strong>Suspects, not convictions.</strong> Buggo narrows the search. You verify the culprit.</p>
+            <details class="case-playback">
+              <summary>Watch the original run <span aria-hidden="true">↘</span></summary>
+              <div class="case-playback-content">
+                <img src="/images/demo.gif" alt="Buggo CLI investigating the Salamanca course scraper and showing ranked suspect files." width="860" height="529" loading="lazy" />
+                <a href={`${github}#readme`} target="_blank" rel="noreferrer">Read the transcript on GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing shell" id="get-started" aria-labelledby="closing-title" data-reveal>
+        <div class="closing-mascot"><img src="/images/buggo.webp" alt="" width="176" height="150" loading="lazy" /></div>
+        <div>
+          <p class="hand-note">Your next case awaits</p>
+          <h2 id="closing-title">Ready to find<br />your first clue?</h2>
+          <p>Install the CLI, add your API key, and investigate a bug in your repository.</p>
+        </div>
+        <div class="install-card">
+          <span class="install-label">01 / install</span>
+          <code>npm install -g @moraxh/buggo</code>
+          <span class="install-label">02 / configure</span>
+          <code>buggo config set-key &lt;your-openrouter-key&gt;</code>
+          <span class="install-label">03 / investigate</span>
+          <code>buggo investigate "your bug" --repo .</code>
+          <a class="button button-primary" href={npm} target="_blank" rel="noreferrer">View package <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell" data-reveal>
+      <span>Buggo © 2026</span>
+      <span>Every bug leaves clues.</span>
+      <a href={github} target="_blank" rel="noreferrer">GitHub ↗</a>
+    </footer>
+    <script>
+      const navigationType = performance.getEntriesByType('navigation')[0]?.type;
+      const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function startPageMotion() {
+        if (!motionPreference.matches && 'IntersectionObserver' in window) {
+          const revealTargets = [...document.querySelectorAll('[data-reveal]')];
+          document.documentElement.classList.add('motion-ready');
+
+          for (const target of revealTargets) {
+            const bounds = target.getBoundingClientRect();
+            const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight * 0.82) - Math.max(bounds.top, 0));
+            if (visibleHeight / bounds.height >= 0.35) target.classList.add('first-view');
+          }
+
+          const observer = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            }
+          }, { threshold: 0.35, rootMargin: '0px 0px -18% 0px' });
+
+          requestAnimationFrame(() => {
+            for (const target of revealTargets) observer.observe(target);
+          });
+        }
+      }
+
+      if (navigationType === 'reload') {
+        window.addEventListener('pageshow', () => {
+          const root = document.documentElement;
+          root.style.scrollBehavior = 'auto';
+          window.scrollTo(0, 0);
+
+          requestAnimationFrame(() => {
+            window.scrollTo(0, 0);
+            root.style.removeProperty('scroll-behavior');
+            history.scrollRestoration = 'auto';
+            startPageMotion();
+          });
+        }, { once: true });
+      } else {
+        startPageMotion();
+      }
+    </script>
+  </body>
+</html>
