@@ -3,6 +3,7 @@ import '@fontsource/cabin-sketch/700.css';
 import '@fontsource/patrick-hand/400.css';
 import '../styles/global.css';
 import { ArrowUpRight, ChevronDown } from '@lucide/astro';
+import Analytics from '@vercel/analytics/astro';
 
 const github = 'https://github.com/moraxh/Buggo';
 const npm = 'https://www.npmjs.com/package/@moraxh/buggo';
@@ -40,6 +41,7 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
     <meta name="twitter:image:alt" content={socialImageAlt} />
     <title>{title}</title>
     <link rel="icon" type="image/webp" href="/images/buggo.webp" />
+    <Analytics />
     <script is:inline>
       const navigationEntry = performance.getEntriesByType('navigation')[0];
       if (navigationEntry?.type === 'reload') history.scrollRestoration = 'manual';

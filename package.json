@@ -12,6 +12,7 @@
     "@fontsource/cabin-sketch": "^5.2.8",
     "@fontsource/patrick-hand": "^5.2.8",
     "@lucide/astro": "^1.47.0",
+    "@vercel/analytics": "^2.0.1",
     "astro": "^7.3.4"
   }
 }

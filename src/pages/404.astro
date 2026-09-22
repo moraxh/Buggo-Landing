@@ -3,6 +3,7 @@ import '@fontsource/cabin-sketch/700.css';
 import '@fontsource/patrick-hand/400.css';
 import '../styles/global.css';
 import { ArrowUpRight } from '@lucide/astro';
+import Analytics from '@vercel/analytics/astro';
 ---
 
 <!doctype html>
@@ -14,6 +15,7 @@ import { ArrowUpRight } from '@lucide/astro';
     <meta name="robots" content="noindex, follow" />
     <title>Page missing | Buggo</title>
     <link rel="icon" type="image/webp" href="/images/buggo.webp" />
+    <Analytics />
   </head>
   <body class="not-found-page">
     <a class="skip-link" href="#main">Skip to content</a>
