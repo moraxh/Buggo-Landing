@@ -61,6 +61,7 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
       <nav aria-label="Main navigation">
         <a href="#features">Features</a>
         <a href="#how-it-works">How it works</a>
+        <a href="#hunt">Hunt</a>
         <a href="#demo">Demo</a>
         <a href={github} target="_blank" rel="noreferrer">GitHub</a>
       </nav>
@@ -145,6 +146,50 @@ const socialImageAlt = 'Buggo the beetle detective studies clues beside an evide
             <dd><code>.json</code> <code>.yaml</code> <code>.yml</code> <code>.toml</code><span class="format-detail">Also Dockerfile, docker-compose files, .dockerignore, .npmrc, and .nvmrc.</span></dd>
           </div>
         </dl>
+      </section>
+
+      <section class="hunt shell" id="hunt" aria-labelledby="hunt-title">
+        <div class="hunt-heading" data-reveal>
+          <p class="hand-note">For when you don't even know what you're looking for.</p>
+          <h2 id="hunt-title">Nothing reported yet?<br /><em>Go hunt one down.</em></h2>
+          <p>
+            <code>buggo investigate</code> needs a bug report. New in v0.2.0, <code>buggo hunt</code> doesn't. Point it at a repo
+            and it triages the files most likely to be hiding an undiscovered bug, before anyone files a report.
+          </p>
+        </div>
+
+        <ol class="hunt-stages">
+          <li data-reveal>
+            <span class="step-number">01</span>
+            <div>
+              <h3>Module-level triage</h3>
+              <p>Scans the repo's structure and narrows in on the riskiest modules and directories first, so large repos stay fast.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="step-number">02</span>
+            <div>
+              <h3>File-level triage</h3>
+              <p>Inside those modules, ranks individual files by how often they've needed a fix in the past.</p>
+            </div>
+          </li>
+          <li class="hunt-stat" data-reveal>
+            <span class="hunt-stat-number">63%</span>
+            <div>
+              <h3>Where real bugs hide</h3>
+              <p>of real bugs turn out to sit in the riskiest 10% of the repo. Chance alone predicts about 10%.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="hunt-honesty" data-reveal>
+          <p class="hunt-honesty-label">Filed under: known limitations</p>
+          <p>
+            The signal favors busy "core" files over quiet, rarely-touched ones that can still hide a bug. Hunt is v0,
+            experimental, and a companion to <code>investigate</code>, not a replacement. Buggo is still better at finding
+            suspects than alibis.
+          </p>
+        </div>
       </section>
 
       <section class="case-section" id="demo" aria-labelledby="case-title">

@@ -408,6 +408,79 @@ h1 em:after {
   font-size: 16px;
   line-height: 1.2;
 }
+.hunt {
+  border-top: 1px solid #d5c3aa;
+  padding-block: 100px 105px;
+}
+.hunt-heading {
+  max-width: 780px;
+  margin-bottom: 50px;
+}
+.hunt-heading h2 {
+  font-size: clamp(52px, 5.8vw, 88px);
+  line-height: 0.93;
+  letter-spacing: -0.055em;
+  margin-bottom: 22px;
+}
+.hunt-heading > p:last-child {
+  color: #59493d;
+  font-size: 23px;
+  line-height: 1.3;
+  max-width: 680px;
+}
+.hunt-heading code,
+.hunt-honesty code {
+  color: #865039;
+  font: 600 0.85em/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.hunt-stages {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 44px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 48px;
+}
+.hunt-stages li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 18px;
+  border-top: 1px dashed #9b806a;
+  padding: 23px 0;
+}
+.hunt-stages h3 {
+  font-size: 27px;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+.hunt-stages p {
+  font-size: 19px;
+  line-height: 1.25;
+  color: #685448;
+  margin: 0;
+}
+.hunt-stat-number {
+  font: 700 38px/0.9 "Cabin Sketch", cursive;
+  color: #af613c;
+}
+.hunt-honesty {
+  border-top: 1px dashed #b49677;
+  padding-top: 26px;
+  max-width: 900px;
+}
+.hunt-honesty-label {
+  color: #a15b3b;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.hunt-honesty > p:last-child {
+  color: #59493d;
+  font-size: 19px;
+  line-height: 1.35;
+  margin: 0;
+}
 .case-section {
   background-color: #e9d6ba;
   background-image:
@@ -803,6 +876,17 @@ a:focus-visible {
   .section-lead h2 {
     font-size: clamp(53px, 11vw, 82px);
   }
+  .hunt {
+    padding-block: 75px 84px;
+  }
+  .hunt-heading {
+    margin-bottom: 40px;
+  }
+  .hunt-stages {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 45px;
+  }
   .case-section {
     padding-block: 68px 76px;
   }
@@ -891,6 +975,9 @@ a:focus-visible {
   }
   .format-row code {
     font-size: 15px;
+  }
+  .hunt-stages li {
+    grid-template-columns: 56px 1fr;
   }
   .case-heading h2 {
     font-size: 53px;
